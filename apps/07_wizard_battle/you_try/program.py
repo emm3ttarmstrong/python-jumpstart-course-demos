@@ -26,24 +26,27 @@ def game_loop():
 
     hero = Wizard('Gandalf', 75)
 
-
+    round_count = 1
 
 
     while True:
 
         active_creature = random.choice(creatures)
         print()
+
         print('A {} of level {} has appeared!'.format(active_creature.name, active_creature.level))
 
         cmd = input("Do you want to (a)ttack, (r)un away, or (l)ook around? ").lower()
+
         if cmd =='a':
             hero.attack(active_creature)
 
-
         elif cmd == 'r':
             print('run away')
-        elif cmd == 'l':
+
+        elif cmd  == 'l':
             print('look around')
+
         else:
             print('Ok, exiting game. Goodbye.')
             break
